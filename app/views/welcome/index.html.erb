@@ -1,0 +1,23 @@
+<p>
+  This is a simple Rails 3 app to demonstrate Connect With SoundCloud.
+  The source code of this app is available on  
+  <%= link_to "GitHub.com", "https://github.com/soundcloudlabs/connect-with-soundcloud-rails-demo"%>.
+</p>
+
+<div class="connect-with-soundcloud <%= "connected" if logged_in? %>">
+  <%= link_to "Connect With SoundCloud",    soundcloud_connect_path, :class => "connect" %>
+  <%= link_to "Disconnect From SoundCloud", soundcloud_disconnect_path, :class => "disconnect" %>
+  <span class="current-user">
+    You are logged in as:
+    <span class="username"><%= current_user.soundcloud_username if logged_in? %></span>
+  </span>
+</div>
+
+
+<div class="visible-when-logged-in <%= "hidden" unless logged_in? %>"">
+  <%= link_to "Check out your profile infos", you_path %>
+</div>
+
+<!-- Basic User Info         -->
+<!-- Update User description -->
+<!-- List of Tracks          -->

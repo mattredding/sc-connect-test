@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Connect with SoundCloud Demo</title>
+  <!--<script src="http://connect.soundcloud.com/base.js"></script>-->
+  <%= stylesheet_link_tag 'http://soundcloudfront.com/stylesheets/style.css', 'application', 'soundcloud' %>
+  <%= javascript_include_tag 'jquery-1.5.min', 'connect', 'application' %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+  <div class="wrapper container">
+    <h1 class="header">Connect with SoundCloud Demo</h1>
+    <%= yield %>
+  </div>
+</body>
+</html>
